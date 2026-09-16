@@ -1,0 +1,15 @@
+# SiteLine StartUp pack — Python 3.10+
+#   python3 -m venv .venv && source .venv/bin/activate
+#   pip install -r requirements.txt
+
+# required by the siteline package
+numpy>=1.24
+# pandas 3.x's PyArrow-backed strings have segfaulted inside geopandas' .to_crs();
+# stay on 2.x until that is confirmed fixed.
+pandas>=2.0,<3
+shapely>=2.0
+scipy>=1.10
+
+# optional — GeoDataFrames (siteline.data.geodataframe), maps in examples/03
+geopandas>=0.14
+matplotlib>=3.7
